@@ -1,7 +1,7 @@
 class AttendancesController < ApplicationController
   def create
     @user = User.find(params[:user_id])
-    @attendance = @user.attendances.find_by(worked_on: Date.today)
+    @attendance = @user.attendances.find_by(worked_on: Date.current) #9時間ずれをDate.currentで回避、Date.todayではだめ
     if @attendance.started_at.nil?
       @attendance.update_attributes(started_at: current_time)
       flash[:info] = 'おはようございます。'
