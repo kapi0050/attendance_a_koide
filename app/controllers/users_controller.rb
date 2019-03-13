@@ -27,8 +27,7 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.find(params[:user_id])
-    @attendance = @user.attendances.find_by(worked_on: Date.today)
+    @user = User.new(user_params)
     if @user.save
       log_in @user
       flash[:success] = "ユーザーの新規作成に成功しました。"
