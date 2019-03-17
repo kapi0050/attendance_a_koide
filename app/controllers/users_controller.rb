@@ -75,6 +75,8 @@ class UsersController < ApplicationController
   end
   
   def working_users
+    #暫定的に変数設置ページネイション確認のため
+    @users = User.paginate(page: params[:page])
   end
   
   def ccc
