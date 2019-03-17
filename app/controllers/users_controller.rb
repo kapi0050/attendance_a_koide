@@ -71,6 +71,15 @@ class UsersController < ApplicationController
     end
   end
   
+  def attendance_log
+  end
+  
+  def working_users
+  end
+  
+  def ccc
+  end
+  
   private
 
     def user_params
