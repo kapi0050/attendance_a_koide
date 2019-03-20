@@ -90,8 +90,10 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
   end
   
-  def ccc
+  #テストページ
+  def test00
   end
+  
   
   private
 

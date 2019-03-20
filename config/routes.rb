@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get  '/working_users', to: 'users#working_users'
   get  '/base_edit', to: 'users#base_edit'
   
+  get  '/test00', to: 'users#test00'
+  
+  
   # sessionsコントローラー
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'

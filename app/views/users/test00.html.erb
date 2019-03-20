@@ -1,0 +1,68 @@
+<% provide(:title, 'テスト00') %>
+
+<h1>テスト00</h1>
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">click me</button>
+<div id="demo" class="collapse">
+Bootstrapは、モバイルファーストウェブサイトを開発するための最も一般的なHTML、CSS、およびJavaScriptフレームワークです。<br/>
+BootstrapはWeb開発のための無料のフロントエンドフレームワークです。<br/>
+Bootstrapには、タイポグラフィ、フォーム、ボタン、テーブル、ナビゲーション、モーダル、画像カルーセルなどのJavaScriptテンプレートとオプションのJavaScriptプラグイン用のHTMLおよびCSSベースのデザインテンプレートが含まれています。<br/>
+Bootstrapを使用すると、レスポンシブデザインを簡単に作成することができます。
+</div>
+
+<h2> </h2>
+<h3> 折りたたみパネル</h3>
+
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse1">click me</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+      <div class="panel-body">内容</div>
+      <div class="panel-footer">フッター</div>
+    </div>
+  </div>
+</div>
+
+<h2> </h2>
+<h3>アコーディオン　テスト </h3>
+<h2> </h2>
+
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">グループ1</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse in">
+      <div class="panel-body">内容</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">グループ2</a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse">
+      <div class="panel-body">内容</div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">グループ3</a>
+      </h4>
+    </div>
+    <div id="collapse5" class="panel-collapse collapse">
+      <div class="panel-body">内容</div>
+    </div>
+  </div>
+</div>
+
+
+

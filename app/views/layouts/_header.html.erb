@@ -7,6 +7,7 @@
         <% if logged_in? %>
           <!--管理者のみ[ユーザー覧],[基本情報修正]タグ表示-->
           <% if current_user.admin? %>
+            <li><%= link_to "テスト00", test00_path %></li>
             <li><%= link_to "ユーザ一覧", users_path %></li>
             <li><%= link_to "出社社員一覧", working_users_path %></li>
             <li><%= link_to "拠点情報の修正", base_edit_path %></li>
