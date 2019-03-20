@@ -2,18 +2,18 @@
   <%= user.name %><br>
   <% if current_user.admin? && !current_user?(user) %>
     | <%= link_to "削除", user, class: "btn btn-primary", method: :delete,
-                                  data: { confirm: "本当に削除してもいいですか？" } %>
+                                  data: { confirm: "削除してもいいですか？" } %>
   
-        <div class="panel-group" id="sampleAccordion-<%= user.id %>">
+        <div class="panel-group" id="accordion-<%= user.id %>">
 	        <div class="panel panel-default">
 		        <div class="panel-heading">
 			        <h3 class="panel-title">
-				        <a class="btn btn-primary btn-lg btn-a" data-toggle="collapse" data-parent="#sampleAccordion-<%= user.id %>" href="#sampleAccordionCollapse1-<%= user.id %>" >
+				        <a class="btn btn-primary btn-lg btn-a" data-toggle="collapse" data-parent="#accordion-<%= user.id %>" href="#accordionCollapse1-<%= user.id %>" >
 					        編集
 				        </a>
 			        </h3>
 		        </div>
-		    <div id="sampleAccordionCollapse1-<%= user.id%>" class="panel-collapse collapse">
+		    <div id="accordionCollapse1-<%= user.id%>" class="panel-collapse collapse">
     			<div class="panel-body">
     			  
     			  <!--なぜ_user_pathか不明-->
@@ -46,7 +46,7 @@
             <%= f.time_field :work_end,{class: 'form-control'} %>
             
             <%= f.submit "編集する", class: "btn btn-primary test" %>
-            <a class="btn btn-primary" data-toggle="collapse" data-parent="#sampleAccordion-<%= user.id %>" href="#sampleAccordionCollapse1-<%= user.id %>" >
+            <a class="btn btn-primary" data-toggle="collapse" data-parent="#accordion-<%= user.id %>" href="#accordionCollapse1-<%= user.id %>" >
 					     閉じる
 				    </a>
     				<% end %>
