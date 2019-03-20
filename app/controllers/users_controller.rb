@@ -51,6 +51,17 @@ class UsersController < ApplicationController
     end
   end
   
+  #勤怠aユーザー覧表示のため追加
+  def update_by_admin
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      flash[:success] = "アカウントを更新しました。"
+      redirect_to users_path
+    else
+      render 'edit'
+    end
+  end
+  
   def destroy
     User.find(params[:id]).destroy
     flash[:success] = "削除しました。"
@@ -85,7 +96,12 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :department, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :department, :password,:password_confirmation,
+                                                                                      :work_time,
+                                                                                      :work_start,
+                                                                                      :work_end,
+                                                                                      :work_number,
+                                                                                      :worker_id,)
     end
     
     # beforeアクション

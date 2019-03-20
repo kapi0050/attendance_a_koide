@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get  '/signup', to: 'users#new'
   get '/edit-basic-info/:id', to: 'users#edit_basic_info', as: :basic_info
   patch 'update-basic-info', to: 'users#update_basic_info'
-  
   get  '/attendance_log', to: 'users#attendance_log'
   get  '/working_users', to: 'users#working_users'
   get  '/base_edit', to: 'users#base_edit'
@@ -21,5 +20,13 @@ Rails.application.routes.draw do
   
   resources :users do
     resources :attendances, only: :create
+    
+    member do
+      #ユーザー覧編集機能のため追加 membr do でルーティングする方法が不明（ない場合noMETHODエラー）
+      patch  'update_by_admin'  #, as: :update_by_admin　ルートに名前をつける必要なし
+    end
+    
+    
   end
+  
 end
