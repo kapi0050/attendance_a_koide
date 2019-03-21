@@ -87,7 +87,8 @@ class UsersController < ApplicationController
   
   def working_users
     #暫定的に変数設置ページネイション確認のため
-    @users = User.paginate(page: params[:page])
+    #@users = User.paginate(page: params[:page])
+    @users = User.where(working: '出社中').paginate(page: params[:page])
   end
   
   #テストページ

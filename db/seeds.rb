@@ -1,7 +1,7 @@
 User.create!(name:  "管理者",
              email: "1111@gmail.com",
-             password:              "aaaaaaaa",
-             password_confirmation: "aaaaaaaa",
+             password:              "11111111",
+             password_confirmation: "11111111",
              department:            "システム管理部",
              admin: true)
              
@@ -26,7 +26,7 @@ User.create!(name:  "cccc@gmail.com",
              password:              "cccccccc",
              password_confirmation: "cccccccc",
              department:            "開発部c",
-             working:               "出社中",
+             working:               "退社中",
              admin: false)
 
 59.times do |n|

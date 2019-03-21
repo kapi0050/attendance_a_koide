@@ -4,10 +4,18 @@ class AttendancesController < ApplicationController
     @attendance = @user.attendances.find_by(worked_on: Date.current) #9時間ずれをDate.currentで回避、Date.todayではだめ
     if @attendance.started_at.nil?
       @attendance.update_attributes(started_at: current_time)
+      
+      #usersテーブルのworkingカラムに出社中を登録
+      @user.update_attributes(working: "出社中")
+      
       flash[:info] = 'おはようございます。'
     elsif @attendance.finished_at.nil?
       @attendance.update_attributes(finished_at: current_time)
       flash[:info] = 'おつかれさまでした。'
+      
+      #usersテーブルのworkingカラムに退社中を登録
+      @user.update_attributes(working: "退社中")
+      
     else
       flash[:danger] = 'トラブルがあり、登録出来ませんでした。'
     end
