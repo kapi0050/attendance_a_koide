@@ -39,3 +39,16 @@ User.create!(name:  "cccc@gmail.com",
                password_confirmation: password,
                department:            "テスト")
 end
+
+#拠点情報 base_edit
+Base.create!(base_number:  "3333",
+             base_name: "テスト33",
+             attendance_type: "テストあああ")
+
+Base.create!(base_number:  "4444",
+             base_name: "テスト44",
+             attendance_type: "テスト異易々")
+
+Base.create!(base_number:  "5555",
+             base_name: "テスト55",
+             attendance_type: "テスト誤午後")

@@ -10,11 +10,4 @@ class User < ApplicationRecord
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   validates :department, length: { in: 3..50 }, allow_blank: true
 
-  #def User.get_working_user
-    
-    #joins(:attendances).where(attendances:{day: Date.today, finished_at: nil}).where.not(works: {started_at: nil})
-    
-    #joins(:works).where(works:{day: Date.today, end_time: nil}).where.not(works: {start_time: nil})
-  #end
-
 end

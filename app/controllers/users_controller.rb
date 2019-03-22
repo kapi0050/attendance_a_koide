@@ -91,6 +91,12 @@ class UsersController < ApplicationController
     @users = User.where(working: '出社中').paginate(page: params[:page])
   end
   
+  def base_edit
+    @bases = Base.all
+    #@base = Base.new
+  end
+  
+  
   #テストページ
   def test00
   end
