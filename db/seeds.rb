@@ -52,3 +52,31 @@ Base.create!(base_number:  "4444",
 Base.create!(base_number:  "5555",
              base_name: "テスト55",
              attendance_type: "テスト誤午後")
+             
+Base.create!(base_number:  "6",
+             base_name: "テスト6",
+             attendance_type: "テストあああ")
+
+Base.create!(base_number:  "7",
+             base_name: "テスト7",
+             attendance_type: "テスト異易々")
+
+Base.create!(base_number:  "8",
+             base_name: "テスト8",
+             attendance_type: "テスト誤午後")
+
+Base.create!(base_number:  "9",
+             base_name: "テスト9",
+             attendance_type: "テストあああ")
+
+Base.create!(base_number:  "10",
+             base_name: "テスト10",
+             attendance_type: "テスト異易々")
+
+Base.create!(base_number:  "11",
+             base_name: "テスト11",
+             attendance_type: "テスト誤午後")
+
+
+
+

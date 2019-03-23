@@ -24,11 +24,19 @@ Rails.application.routes.draw do
   resources :users do
     resources :attendances, only: :create
     
+    #拠点編集ページルーティング
+    collection do
+      get  'base_edit'
+      #post 'base_add'
+      #patch 'base_update'
+      delete 'base_delete'
+      #get 'base_edit_modal'
+    end
+    
     member do
       #ユーザー覧編集機能のため追加 membr do でルーティングする方法が不明（ない場合noMETHODエラー）
       patch  'update_by_admin'  #, as: :update_by_admin　ルートに名前をつける必要なし
     end
-    
     
   end
   

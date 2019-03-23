@@ -18,7 +18,8 @@
             <% @bases.each do |base| %>
             <tr>
                 <td>編集(ボタン)</td>
-                <td>削除(ボタン)</td>
+                <td><%= link_to "削除", base_delete_users_path(id: base.id), class: "btn btn-primary", method: :delete,
+                    data: { confirm: "本当に削除してもいいですか？" } %></td>
                 <td><%= base.base_number %></td>
                 <td><%= base.base_name %></td>
                 <td><%= base.attendance_type %></td>
