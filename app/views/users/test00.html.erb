@@ -1,68 +1,45 @@
-<% provide(:title, 'テスト00') %>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>テスト</title>
+    <!--CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <!--JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
 
-<h1>テスト00</h1>
+<body>
+<!-- 1.モーダルを表示する為のボタン -->
+<button class="btn btn-primary" data-toggle="modal" data-target="#modal-sample">
+    モーダルを表示
+</button>
 
-<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">click me</button>
-<div id="demo" class="collapse">
-Bootstrapは、モバイルファーストウェブサイトを開発するための最も一般的なHTML、CSS、およびJavaScriptフレームワークです。<br/>
-BootstrapはWeb開発のための無料のフロントエンドフレームワークです。<br/>
-Bootstrapには、タイポグラフィ、フォーム、ボタン、テーブル、ナビゲーション、モーダル、画像カルーセルなどのJavaScriptテンプレートとオプションのJavaScriptプラグイン用のHTMLおよびCSSベースのデザインテンプレートが含まれています。<br/>
-Bootstrapを使用すると、レスポンシブデザインを簡単に作成することができます。
+<!-- 2.モーダルの配置 -->
+<div class="modal" id="modal-sample" tabindex="-1">
+    <div class="modal-dialog">
+
+        <!-- 3.モーダルのコンテンツ -->
+        <div class="modal-content">
+            <!-- 4.モーダルのヘッダ -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="modal-label">モーダルのタイトルを表示する</h4>
+            </div>
+            <!-- 5.モーダルのボディ -->
+            <div class="modal-body">
+                コンテンツの本文
+            </div>
+            <!-- 6.モーダルのフッタ -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-<h2> </h2>
-<h3> 折りたたみパネル</h3>
-
-<div class="panel-group">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapse1">click me</a>
-      </h4>
-    </div>
-    <div id="collapse1" class="panel-collapse collapse">
-      <div class="panel-body">内容</div>
-      <div class="panel-footer">フッター</div>
-    </div>
-  </div>
-</div>
-
-<h2> </h2>
-<h3>アコーディオン　テスト </h3>
-<h2> </h2>
-
-<div class="panel-group" id="accordion">
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">グループ1</a>
-      </h4>
-    </div>
-    <div id="collapse3" class="panel-collapse collapse in">
-      <div class="panel-body">内容</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">グループ2</a>
-      </h4>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse">
-      <div class="panel-body">内容</div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">グループ3</a>
-      </h4>
-    </div>
-    <div id="collapse5" class="panel-collapse collapse">
-      <div class="panel-body">内容</div>
-    </div>
-  </div>
-</div>
-
-
-
+</body>
+</html>
