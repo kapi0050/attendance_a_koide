@@ -93,8 +93,18 @@ class UsersController < ApplicationController
   
   def base_edit
     @bases = Base.all
-    @base = Base.new
+    #@base = Base.new
   end
+  
+  # def base_update
+  #   @base = Base.find(params[:id])
+  #     if @base.update(base_params)
+  #       flash[:success] = "拠点情報を更新しました。"
+  #       redirect_to base_edit_users_path
+  #     else
+  #       render 'base_edit'
+  #     end
+  # end
   
   def base_delete
     @base = Base.find(params[:id])
