@@ -125,6 +125,16 @@ class UsersController < ApplicationController
     #@bases = Base.all
   end
   
+  def update_test00
+    @user = User.find(params[:id])
+    if @user.update_attributes(basic_info_params)
+      flash[:success] = "基本情報を更新しました。"
+      redirect_to @user   
+    else
+      render 'base_edit'
+    end
+  end
+  
   
   private
 
