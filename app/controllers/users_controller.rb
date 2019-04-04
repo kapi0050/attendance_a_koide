@@ -93,7 +93,9 @@ class UsersController < ApplicationController
   
   def base_edit
     @bases = Base.all
-    #@base = Base.new
+    @base = Base.new
+    @user = User.new
+    
   end
   
   # def base_update
@@ -119,6 +121,7 @@ class UsersController < ApplicationController
   
   #テストページ
   def test00
+    @bases = Base.all
   end
   
   
