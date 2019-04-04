@@ -9,7 +9,14 @@ Rails.application.routes.draw do
   get  '/working_users', to: 'users#working_users'
   get  '/base_edit', to: 'users#base_edit'
   
+  #拠点テスト
   get  '/test00', to: 'users#test00'
+  get  '/test00/:id', to: 'users#test00', as: :test
+  #patch 'update-test00', to: 'users#update_test00'
+  
+  
+  #get  '/test00/:id', to: 'users#base_edit', as: :test00
+  patch 'update-test00', to: 'users#update_base_edit'
   
   
   # sessionsコントローラー
@@ -26,7 +33,7 @@ Rails.application.routes.draw do
     
     #拠点編集ページルーティング
     collection do
-      get  'base_edit'
+      #get  'base_edit'
       #post 'base_add'
       
       #get 'base_update'

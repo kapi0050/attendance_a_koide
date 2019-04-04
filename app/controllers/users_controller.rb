@@ -121,7 +121,8 @@ class UsersController < ApplicationController
   
   #テストページ
   def test00
-    @bases = Base.all
+    @user = User.find(params[:id])
+    #@bases = Base.all
   end
   
   

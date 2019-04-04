@@ -28,9 +28,8 @@
           <tbody>
               <% @bases.each do |base| %>
               <tr>
-                  <td class="btn btn-primary" data-toggle="modal" data-target="#modal-sample">
-                    編集(ボタン)
-                  </td>
+                  <td><%= link_to "基本情報編集てすと", test_path(id: base.id) %></td>
+                  
                   
                   <td><%= link_to "削除", base_delete_users_path(id: base.id), class: "btn btn-primary", method: :delete,
                       data: { confirm: "本当に削除してもいいですか？" } %></td>
