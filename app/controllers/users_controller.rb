@@ -135,6 +135,25 @@ class UsersController < ApplicationController
     end
   end
   
+    #テストページ1
+  def test01
+    #@user = User.find(params[:id])
+    @base = Base.find(params[:id])
+    #binding.pry
+  end
+  
+  def update_test01
+    #binding.pry
+    @base = Base.find(params[:id])
+    if @base.update_attributes(base_params)
+      flash[:success] = "拠点を更新しました。"
+      redirect_to '/base_edit'
+    else
+      render 'base_edit'
+    end
+  end
+  
+  
   
   private
 
@@ -172,4 +191,9 @@ class UsersController < ApplicationController
     def basic_info_params
       params.require(:user).permit(:basic_time, :work_time)
     end
+    
+    def base_params
+      params.require(:base).permit(:base_number, :base_name)
+    end
+    
 end

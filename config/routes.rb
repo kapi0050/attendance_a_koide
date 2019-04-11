@@ -11,12 +11,15 @@ Rails.application.routes.draw do
   
   #拠点テスト
   get  '/test00', to: 'users#test00'
-  get  '/test00/:id', to: 'users#test00', as: :test
-  patch 'update-test00', to: 'users#update_test00'
+  #get  '/test00/:id', to: 'users#test00', as: :test
+  #patch 'update-test00', to: 'users#update_test00'
   
+  #テスト発展
+  get  '/test01/:id', to: 'users#test01', as: :test01
+  patch 'update-test01', to: 'users#update_test01'
   
   #get  '/test00/:id', to: 'users#base_edit', as: :test00
-  #patch 'update-test00', to: 'users#update_base_edit'
+  #patch 'update-test00', to: 'users#update_test01'
   
   
   # sessionsコントローラー

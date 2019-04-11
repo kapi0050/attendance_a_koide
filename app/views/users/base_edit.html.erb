@@ -28,7 +28,7 @@
           <tbody>
               <% @bases.each do |base| %>
               <tr>
-                  <td><%= link_to "基本情報編集てすと", test_path(id: base.id) %></td>
+                  <td><%= link_to "基本情報編集てすと", test01_path(id: base.id) %></td>
                   
                   
                   <td><%= link_to "削除", base_delete_users_path(id: base.id), class: "btn btn-primary", method: :delete,
